@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //字面量创建对象
+        // var lilei = {
+        //     name: 'lilei',
+        //     age: 11,
+        //     intr: function () {
+        //         console.log(name);
+        //     }
+        // }
+        // console.log(lilei.intr());
+        // console.log(lilei);
+        //用new创建：
+        /*
+        1.先创建一个空对象
+        2.
+
+        */
+        var lilei = new Object()
+        lilei.sname = "LiLei"
+        lilei.sage = 11;
+        lilei.intr=function(){
+            console.log(`I'm${this.sname},I'm${this.sage}`);  
+        }
+        lilei.intr();
+        console.log(lilei.sname);  
+        console.log(lilei);
+        // for (var 属性名 in 数组或对象)｛
+        /*
+            in 会一次取出数组或对象中每个成员的：前的名字
+             要想进一步访问每个对象的成员值
+    }
+        */  
+       for (var shuxing in lilei){
+           console.log(`属性:${shuxing} ${lilei[shuxing]}`);
+           
+       }
+    </script>
+</body>
+
+</html>

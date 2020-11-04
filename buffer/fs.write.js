@@ -21,6 +21,7 @@
  * */ 
 //引入内置的fs模块
 let fs= require('fs')
+ 
 //调用writeFile方法
 fs.writeFile('./demo.txt','zou！',{mode:0o666,flag:'a'},(err)=>{
     if(err){

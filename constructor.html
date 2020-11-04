@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Student(name, age) {
+            this.name = name;
+            this.age = age;
+            console.log('nihoa');
+            
+            this.intr = function () {
+                console.log(`I'm${this.name},I'm ${this.age}`);
+            }
+        }
+        var lilei = new Student('lilei', 18)
+        var hanmeimei = new Student('hanmeimei', 17)
+        // new的四个步骤：
+        /* 1.在内存中开辟一个新空间
+           2.让新对象继承(__proto__)构造函数的原型对象
+           3.调用构造函数，强行将构造函数中的this改为new正在创建的新对象，为新对象天津唉规定的属性，并保存属性值
+           4.返回新对象的地址，保存到=左边的变量
+         
+        
+        */
+        console.log(lilei);
+        console.log(hanmeimei);
+    </script>
+</body>
+
+</html>

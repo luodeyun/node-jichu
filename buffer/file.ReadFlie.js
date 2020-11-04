@@ -1,6 +1,6 @@
 /*
  fs.readFile(path [,options],callback)
-   --path ：尧都区文件爱你的路径+文件爱你名+后缀
+   --path ：尧都区文件爱你的路径+文件名+后缀
    --options:配置对象(可选)
    --callback：回调
 */ 

@@ -26,25 +26,37 @@
         2.
 
         */
-        var lilei = new Object()
-        lilei.sname = "LiLei"
-        lilei.sage = 11;
-        lilei.intr=function(){
-            console.log(`I'm${this.sname},I'm${this.sage}`);  
-        }
-        lilei.intr();
-        console.log(lilei.sname);  
-        console.log(lilei);
-        // for (var 属性名 in 数组或对象)｛
-        /*
-            in 会一次取出数组或对象中每个成员的：前的名字
-             要想进一步访问每个对象的成员值
-    }
-        */  
-       for (var shuxing in lilei){
-           console.log(`属性:${shuxing} ${lilei[shuxing]}`);
+    //     var lilei = new Object()
+    //     lilei.sname = "LiLei"
+    //     lilei.sage = 11;
+    //     lilei.intr=function(){
+    //         console.log(`I'm${this.sname},I'm${this.sage}`);  
+    //     }
+    //     lilei.intr();
+    //     console.log(lilei.sname);  
+    //     console.log(lilei);
+    //     // for (var 属性名 in 数组或对象)｛
+    //     /*
+    //         in 会一次取出数组或对象中每个成员的：前的名字
+    //          要想进一步访问每个对象的成员值
+    // }
+    //     */  
+    //    for (var shuxing in lilei){
+    //        console.log(`属性:${shuxing} ${lilei[shuxing]}`);
            
-       }
+    //    }
+    //将下面改为驼峰命名
+	var str = "get-element-by-id";
+	var reg = /-[a-z]/g;
+	// console.log(str.match(reg));//["-e", "-b", "-i"]
+	console.log(str.replace(reg,function(p){
+        console.log(p);   //-e -b -i
+     
+
+        return p[1].toUpperCase()/*  */
+    }));
+str.sub
+     
     </script>
 </body>
 

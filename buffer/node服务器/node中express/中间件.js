@@ -49,12 +49,12 @@
 //     else console.log(err);
 // })
 //-------------------------------------------------------
-let express = require('express')
-//引入第三方中间件
-// （2）第三方中间件(通过npm下载的中间件，例如body-parser)
-//  *        app.use(bodyParser.urlencoded({extended:true}))
-let bodyParser = require('body-parser')
-let app = express()
+// let express = require('express')
+// //引入第三方中间件
+// // （2）第三方中间件(通过npm下载的中间件，例如body-parser)
+// //  *        app.use(bodyParser.urlencoded({extended:true}))
+// let bodyParser = require('body-parser')
+// let app = express()
 // app.use((req, res, next) => {
 // //1.过滤一些合法的请求
 // // if(合法){
@@ -64,19 +64,19 @@ let app = express()
 
 // }
 // )
-app.use(bodyParser.urlencoded({
- //解析post请求请求体中所携带的urlencoded编码形式的参数为一个对象，随后挂载到request.body对象上
-    extended: true
-}))
-app.get('/', (req, res) => {
-    res.send('ok 你好')
-})
-app.post('/demo', (req, res) => {
-    console.log(req.body);
+// app.use(bodyParser.urlencoded({
+//  //解析post请求请求体中所携带的urlencoded编码形式的参数为一个对象，随后挂载到request.body对象上
+//     extended: true
+// }))
+// app.get('/', (req, res) => {
+//     res.send('ok 你好')
+// })
+// app.post('/demo', (req, res) => {
+//     console.log(req.body);
     
-    res.send('ok 你好demo')
-})
-app.listen(3004, function (err) {
-    if (!err) console.log('ok');
-    else console.log(err);
-})
+//     res.send('ok 你好demo')
+// })
+// app.listen(3004, function (err) {
+//     if (!err) console.log('ok');
+//     else console.log(err);
+// })

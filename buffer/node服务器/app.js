@@ -1,11 +1,10 @@
 /**
  * 不借助任何第三方库，去搭建原生服务器
- * 
  */
 //引入Node内置的http模块
 let http = require('http');
 let qs = require('querystring')
-//创建一个“服务员” --曾经爱你服务对象
+//创建一个“服务员” -创建一个服务对象
 let server = http.createServer(function (req, res) {
     //让服务员开始干活，获取客人点的菜单
     /**

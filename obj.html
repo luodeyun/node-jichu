@@ -46,17 +46,37 @@
            
     //    }
     //将下面改为驼峰命名
-	var str = "get-element-by-id";
-	var reg = /-[a-z]/g;
-	// console.log(str.match(reg));//["-e", "-b", "-i"]
-	console.log(str.replace(reg,function(p){
-        console.log(p);   //-e -b -i
-     
+	// var str = "get-element-by-id";
+	// var reg = /-[a-z]/g;
+	// // console.log(str.match(reg));//["-e", "-b", "-i"]
+	// console.log(str.replace(reg,function(p){
+    //     console.log(p);   //-e -b -i
+    //     return p[1].toUpperCase()
+    // }));
+// str.sub
 
-        return p[1].toUpperCase()/*  */
-    }));
-str.sub
-     
+// function Product(name, price) {
+//   this.name = name;
+//   this.price = price;
+// }
+
+// function Food(name, price) {
+//   Product.call(this, name, price);
+//   this.category = 'food';
+// }
+
+// console.log(new Food('cheese', 5).name);   
+const arraySparse = [1,3,,7];
+let numCallbackRuns = 0;
+
+arraySparse.forEach(function(element,index){
+  console.log(element);
+  console.log(index);
+  
+  numCallbackRuns++;
+});
+
+console.log("numCallbackRuns: ", numCallbackRuns);
     </script>
 </body>
 

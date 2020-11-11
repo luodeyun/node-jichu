@@ -1,5 +1,5 @@
 let mongoose = require('mongoose')
-mongoose.set('useCreateIndex',true)
+mongoose.set('useCreateIndex', true)
 mongoose.connect('mongodb://localhost:27017/test', {
     useNewUrlParser: true, //使用一个新的url解析器，用于解析一些安全性问题
     useUnifiedTopology: true //使用一个统一的拓扑结构
@@ -20,7 +20,6 @@ mongoose.connection.on('open', function (err) {
             name: {
                 type: String,
                 required: false,
-               
             },
             sex: {
                 type: String,
@@ -29,7 +28,7 @@ mongoose.connection.on('open', function (err) {
             age: {
                 type: Number,
                 required: true,
-               
+
             },
 
             hobby: [String],
@@ -40,34 +39,34 @@ mongoose.connection.on('open', function (err) {
             },
 
             enable_flag: {
-                type:String,
+                type: String,
                 default: 'Y',
-               
+
             }
         })
-        let stumodel = mongoose.model('students',StudentsRlue)
-      /*  stumodel.create({
-            stu_id:'004',
-            name:'班长',
-            age:20,
-            sex:'男',
-            hobby:['爱女','喝酒','打篮球'],
-            info:'一个风一样的男子'
-        },function(err,data){
-            if(err){
-                console.log(err);               
-            }
-            else{console.log(data);
-            }
-        })*/
-        stumodel.find({},function(er,data){
-            if(err){
+        let stumodel = mongoose.model('students', StudentsRlue)
+        /*  stumodel.create({
+              stu_id:'004',
+              name:'班长',
+              age:20,
+              sex:'男',
+              hobby:['爱女','喝酒','打篮球'],
+              info:'一个风一样的男子'
+          },function(err,data){
+              if(err){
+                  console.log(err);               
+              }
+              else{console.log(data);
+              }
+          })*/
+        stumodel.find({
+            name: '班长'
+        }, function (err, data) {
+            if (err) {
                 console.log(err);
-                
-            }
-            else{
+            } else {
                 console.log(data);
-                
+
             }
         })
     }

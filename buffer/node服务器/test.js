@@ -3,8 +3,6 @@ let db = require('./db');
 (async()=>{
     await db  
     let result = await stuModel.findOne({name:'班长'})
-    console.log(result);
-    console.log(db);
 })()
 // db
 //     .then(value => {

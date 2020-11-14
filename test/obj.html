@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>使用Selector API实现购物车客户端计算</title>
+    <meta charset="utf-8"  />
+    <style>
+        table {
+            width: 600px;
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            border: 1px solid black
+        }
+
+        td[colspan="3"] {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+      <table id="data">
+            <thead>
+                  <tr>
+                        <th>商品名称</th>
+                        <th>单价</th>
+                        <th>数量</th>
+                        <th>小计</th>
+                      </tr>
+                </thead>
+            <tbody>
+                  <tr>
+                        <td>iPhone6</td>
+                        <td>¥4488.00</td>
+                        <td>
+                              <button>-</button>
+                              <span>1</span>
+                              <button>+</button>
+                            </td>
+                        <td>¥4488.00</td>
+                      </tr>
+                  <tr>
+                        <td>iPhone6 plus</td>
+                        <td>¥5288.00</td>
+                        <td>
+                              <button>-</button>
+                              <span>1</span>
+                              <button>+</button>
+                            </td>
+                        <td>¥5288.00</td>
+                      </tr>
+                  <tr>
+                        <td>iPad Air 2</td>
+                        <td>¥4288.00</td>
+                        <td>
+                              <button>-</button>
+                              <span>1</span>
+                              <button>+</button>
+                            </td>
+                        <td>¥4288.00</td>
+                      </tr>
+                </tbody>
+            <tfoot>
+                  <tr>
+                        <td colspan="3">Total: </td>
+                        <td>¥14064.00</td>
+                      </tr>
+                </tfoot>
+          </table>
+    <script>
+        //字面量创建对象
+        // var lilei = {
+        //     name: 'lilei',
+        //     age: 11,
+        //     intr: function () {
+        //         console.log(name);
+        //     }
+        // }
+        // console.log(lilei.intr());
+        // console.log(lilei);
+        //用new创建：
+        /*
+        1.先创建一个空对象
+        2.
+
+        */
+        //     var lilei = new Object()
+        //     lilei.sname = "LiLei"
+        //     lilei.sage = 11;
+        //     lilei.intr=function(){
+        //         console.log(`I'm${this.sname},I'm${this.sage}`);  
+        //     }
+        //     lilei.intr();
+        //     console.log(lilei.sname);  
+        //     console.log(lilei);
+        //     // for (var 属性名 in 数组或对象)｛
+        //     /*
+        //         in 会一次取出数组或对象中每个成员的：前的名字
+        //          要想进一步访问每个对象的成员值
+        // }
+        //     */  
+        //    for (var shuxing in lilei){
+        //        console.log(`属性:${shuxing} ${lilei[shuxing]}`);
+
+        //    }
+        //将下面改为驼峰命名
+        // var str = "get-element-by-id";
+        // var reg = /-[a-z]/g;
+        // // console.log(str.match(reg));//["-e", "-b", "-i"]
+        // console.log(str.replace(reg,function(p){
+        //     console.log(p);   //-e -b -i
+        //     return p[1].toUpperCase()
+        // }));
+        // str.sub
+
+        // function Product(name, price) {
+        //   this.name = name;
+        //   this.price = price;
+        // }
+
+        // function Food(name, price) {
+        //   Product.call(this, name, price);
+        //   this.category = 'food';
+        // }
+
+        // console.log(new Food('cheese', 5).name);   
+        // const arraySparse = [1,3,,7];
+        // let numCallbackRuns = 0;
+
+        // arraySparse.forEach(function(element,index){
+        //   console.log(element);
+        //   console.log(index);
+
+        //   numCallbackRuns++;
+        // });
+
+        // console.log("numCallbackRuns: ", numCallbackRuns);
+        // const targets = [1, 1, 2, 3, 4, 3, 3];
+
+        // const noRepeat = targets.reduce((previousValue, currentValue, index, array) => {
+        //     console.log(previousValue)
+        //     console.log(currentValue)
+        //   if (!previousValue.includes(currentValue)) {
+
+        //     return previousValue.concat(currentValue);
+        //   }
+
+        //   return previousValue;
+        // }, []);
+
+        // console.log(noRepeat);
+        // var arr=[1,2,3,4,5]
+        //  var arr= [{a:1},{b:2},{c:3},{d:4}]
+        //  var arr1=[]
+        //  arr1.push()
+        // console.log(
+        //  arr.filter(elem=>{  
+        //      for( p in elem){  
+        //         if(elem[p]>2)
+        //       {  console.log(p);
+
+        //         arr1.push(p)  
+        //         arr1.join('').split('')
+        //        console.log(arr1)}
+
+        //      }       
+        //    return  1
+        // }) )
+    </script>
+</body>
+
+</html>

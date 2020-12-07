@@ -12,6 +12,5 @@ module.exports = new Promise((resolve,reject)=>{
             console.log('数据库连接成功');
             resolve()       
         }
-        
     })
 })

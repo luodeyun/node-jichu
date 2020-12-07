@@ -24,6 +24,7 @@ app.get('/',function(req,res){
     res.send('ok')
 })
 app.get('/demo/:id',function(req,res){
+    res.set("Access-Control-Allow-Origin", "*");
     console.log(req.params);
     
 res.send('我是参数路由页面')    

@@ -1,6 +1,6 @@
-let mongoose = require('mongoose')
-let Schema = mongoose.Schema
-let StuRule = new Schema({
+let mongoose = require('mongoose')  //连接数据库 
+let Schema = mongoose.Schema   //制定规则模式
+let StuRule = new Schema({      
             stu_id: {
                 type: String,
                 required: true,
@@ -28,5 +28,5 @@ let StuRule = new Schema({
                 type: String,
                 default: 'Y',
             }
-        })
- module.exports = new mongoose.model('students',StuRule)
+        })                                
+ module.exports = new mongoose.model('students',StuRule)  //students 数据库下的students集合
